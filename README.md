@@ -33,3 +33,16 @@ NuGet: Microsoft.EntityFrameworkCore.Design
 ```
 
 [Learn ADO.NET by building CRUD features in ASP.NET Core Application](https://www.yogihosting.com/ado-net-aspnet-core/)
+
+## [EF Core - Database First](https://www.yogihosting.com/database-first-approach-entity-framework-core/)
+
+```csharp
+/**
+// 通過數據庫搭建
+dotnet ef dbcontext scaffold "Server=vaio;Database=Company;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+ */
+```
+
+[Calling ASP.NET Core Web APIs with JavaScript and performing CRUD operations](https://www.yogihosting.com/aspnet-core-web-api-javascript/)  
+[Installation of Entity Framework Core](https://www.yogihosting.com/install-entity-framework-core/)  
+[Xaero – Entity Framework Core Advanced Project](https://www.yogihosting.com/xaero-project-entity-framework-core/)
