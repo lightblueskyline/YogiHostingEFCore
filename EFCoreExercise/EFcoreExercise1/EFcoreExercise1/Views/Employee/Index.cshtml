@@ -13,6 +13,7 @@
         <th>Name</th>
         <th>Designation</th>
         <th>Department</th>
+        <th>Update</th>
     </tr>
     @foreach (Employee emp in Model)
     {
@@ -21,6 +22,9 @@
             <td>@emp.Name</td>
             <td>@emp.Designation</td>
             <td>@emp?.Department?.Name</td>
+            <td>
+                <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@emp?.Id">Update</a>
+            </td>
         </tr>
     }
 </table>

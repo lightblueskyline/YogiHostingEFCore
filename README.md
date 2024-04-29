@@ -113,3 +113,10 @@ Microsoft.EntityFrameworkCore.Proxies
 
 [Read Records using ADO.NET in ASP.NET Core Application](https://www.yogihosting.com/read-records-ado-net-aspnet-core/)  
 [Create Number Paging with Custom Tag Helper in ASP.NET Core](https://www.yogihosting.com/aspnet-core-paging/)
+
+## [EF Core - Update Records](https://www.yogihosting.com/update-records-entity-framework-core/)
+
+[Update Records using ADO.NET in ASP.NET Core Application](https://www.yogihosting.com/update-records-ado-net-aspnet-core/)  
+[Advanced Model Binding Concepts in ASP.NET Core](https://www.yogihosting.com/aspnet-core-advanced-model-binding/)  
+[Read Records in Entity Framework Core](https://www.yogihosting.com/read-records-entity-framework-core/)  
+[TryUpdateModelAsync](https://www.yogihosting.com/insert-records-entity-framework-core/#modelupdate)

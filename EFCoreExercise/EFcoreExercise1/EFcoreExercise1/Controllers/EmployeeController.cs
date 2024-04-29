@@ -57,5 +57,65 @@ namespace EFcoreExercise1.Controllers
             return View();
         }
         #endregion
+
+        #region Entity Framework Core CRUD Operations – UPDATE RECORDS
+        public async Task<IActionResult> Update(int id)
+        {
+            Employee? emp = await this.companyContext.Employee
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
+
+            List<SelectListItem> dept = new List<SelectListItem>();
+            dept = this.companyContext.Department
+                .AsNoTracking()
+                .Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() })
+                .ToList();
+            ViewBag.Department = dept;
+
+            return View(emp);
+        }
+
+        //[HttpPost]
+        //public async Task<IActionResult> Update(Employee emp)
+        //{
+        //    this.companyContext.Update(emp);
+        //    await this.companyContext.SaveChangesAsync();
+
+        //    return RedirectToAction("Index");
+        //}
+
+        #region TryUpdateModelAsync
+        [HttpPost]
+        public async Task<IActionResult> Update(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var empToUpdate = await this.companyContext.Employee
+                .FirstOrDefaultAsync(x => x.Id == id);
+            if (await TryUpdateModelAsync<Employee>((empToUpdate ?? new Employee()), "", s => s.Name, s => s.DepartmentId, s => s.Designation))
+            {
+                try
+                {
+                    await this.companyContext.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                }
+                catch (DbUpdateException ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
+                }
+            }
+
+            return View(empToUpdate);
+        }
+        #endregion
+
+        #endregion
     }
 }

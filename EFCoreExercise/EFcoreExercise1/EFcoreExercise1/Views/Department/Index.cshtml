@@ -11,12 +11,16 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>Update</th>
     </tr>
     @foreach (Department dept in Model)
     {
         <tr>
             <td>@dept.Id</td>
             <td>@dept.Name</td>
+            <td>
+                <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@dept.Id">Update</a>
+            </td>
         </tr>
     }
 </table>
