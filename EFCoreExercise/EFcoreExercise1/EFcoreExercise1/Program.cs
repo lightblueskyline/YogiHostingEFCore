@@ -1,3 +1,4 @@
+using EFcoreExercise1.Data;
 using EFcoreExercise1.Models;
 
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,16 @@ namespace EFcoreExercise1
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
+
+            #region Entity Framework Core Seed Data
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetRequiredService<CompanyContext>();
+                context.Database.EnsureCreated();
+                DbInitializer.Initialize(context);
+            }
+            #endregion
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

@@ -11,6 +11,8 @@ namespace EFcoreExercise1.Models
         public DbSet<Department> Department { get; set; }
 
         public DbSet<Employee> Employee { get; set; }
+
+        public DbSet<Information> Information { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -20,12 +20,12 @@ namespace EFcoreExercise1.Controllers
 
         public IActionResult Index()
         {
-            Department dept = new Department()
-            {
-                Name = "Designing"
-            };
-            this.companyContext.Entry(dept).State = EntityState.Added;
-            this.companyContext.SaveChanges();
+            //Department dept = new Department()
+            //{
+            //    Name = "Designing"
+            //};
+            //this.companyContext.Entry(dept).State = EntityState.Added;
+            //this.companyContext.SaveChanges();
 
             return View();
         }
@@ -40,5 +40,22 @@ namespace EFcoreExercise1.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        #region EF Core - Code First Approach
+        public IActionResult CreateInformation()
+        {
+            Information info = new Information()
+            {
+                Name = "YogiHosting",
+                License = "XXYY",
+                Revenue = 1000,
+                Establshied = Convert.ToDateTime("2014/06/24")
+            };
+            this.companyContext.Entry(info).State = EntityState.Added;
+            this.companyContext.SaveChanges();
+
+            return View();
+        }
+        #endregion
     }
 }

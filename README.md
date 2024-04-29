@@ -61,3 +61,18 @@ dotnet ef database update
 [Fluent API in Entity Framework Core](https://www.yogihosting.com/fluent-api-entity-framework-core/)  
 [Migrations in Entity Framework Core](https://www.yogihosting.com/migrations-entity-framework-core/)  
 [Insert Records in Entity Framework Core](https://www.yogihosting.com/insert-records-entity-framework-core/)
+
+## [EF Core - Code First Approach](https://www.yogihosting.com/code-first-entity-framework-core/)
+
+```csharp
+/**
+dotnet ef migrations add AddInformation
+dotnet ef database update
+dotnet ef database drop
+ */
+```
+
+[EDMX](https://www.yogihosting.com/entity-framework-create-edmx-file/)  
+[Install Entity Framework Core](https://www.yogihosting.com/install-entity-framework-core/)  
+[Database Context (DbContext)](https://www.yogihosting.com/dbcontext-entity-framework-core/)  
+[EF Core Migrations](https://www.yogihosting.com/migrations-entity-framework-core/)
