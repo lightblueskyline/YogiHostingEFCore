@@ -97,3 +97,7 @@ dotnet ef migrations script
 [Entity Framework Core tools reference - .NET Core CLI](https://learn.microsoft.com/en-us/ef/core/cli/dotnet)  
 [Installation of Entity Framework Core](https://www.yogihosting.com/install-entity-framework-core/)  
 [Execute SQL Stored Procedures using FromSqlRaw() & ExecuteSqlRawAsync() methods in Entity Framework Core](https://www.yogihosting.com/stored-procedures-entity-framework-core/)
+
+## [EF Core - Insert Records](https://www.yogihosting.com/insert-records-entity-framework-core/)
+
+[How to call Web API from JavaScript](https://www.yogihosting.com/aspnet-core-web-api-javascript/)
