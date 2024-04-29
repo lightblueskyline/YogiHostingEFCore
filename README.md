@@ -46,3 +46,18 @@ dotnet ef dbcontext scaffold "Server=vaio;Database=Company;Trusted_Connection=Tr
 [Calling ASP.NET Core Web APIs with JavaScript and performing CRUD operations](https://www.yogihosting.com/aspnet-core-web-api-javascript/)  
 [Installation of Entity Framework Core](https://www.yogihosting.com/install-entity-framework-core/)  
 [Xaero – Entity Framework Core Advanced Project](https://www.yogihosting.com/xaero-project-entity-framework-core/)
+
+## [EF Core - DbContext Class](https://www.yogihosting.com/dbcontext-entity-framework-core/)
+
+```csharp
+/**
+dotnet ef migrations add Migration1
+dotnet ef database update
+ */
+```
+
+[Installation of Entity Framework Core](https://www.yogihosting.com/install-entity-framework-core/)  
+[Conventions in Entity Framework Core](https://www.yogihosting.com/conventions-entity-framework-core/)  
+[Fluent API in Entity Framework Core](https://www.yogihosting.com/fluent-api-entity-framework-core/)  
+[Migrations in Entity Framework Core](https://www.yogihosting.com/migrations-entity-framework-core/)  
+[Insert Records in Entity Framework Core](https://www.yogihosting.com/insert-records-entity-framework-core/)

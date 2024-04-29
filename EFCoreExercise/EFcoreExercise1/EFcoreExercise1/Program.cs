@@ -1,3 +1,7 @@
+using EFcoreExercise1.Models;
+
+using Microsoft.EntityFrameworkCore;
+
 namespace EFcoreExercise1
 {
     public class Program
@@ -5,6 +9,10 @@ namespace EFcoreExercise1
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // ×¢ƒÔ CompanyContext
+            builder.Services.AddDbContext<CompanyContext>(opts =>
+                opts.UseSqlite(builder.Configuration.GetConnectionString("SqliteDefaultConnection")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
