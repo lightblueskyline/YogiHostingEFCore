@@ -76,3 +76,24 @@ dotnet ef database drop
 [Install Entity Framework Core](https://www.yogihosting.com/install-entity-framework-core/)  
 [Database Context (DbContext)](https://www.yogihosting.com/dbcontext-entity-framework-core/)  
 [EF Core Migrations](https://www.yogihosting.com/migrations-entity-framework-core/)
+
+## [EF Core - Migrations](https://www.yogihosting.com/migrations-entity-framework-core/)
+
+```csharp
+/**
+dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef
+dotnet ef migrations add Migration1
+dotnet ef database update
+dotnet ef migrations add Migration1 --context EmployeeContext
+dotnet ef database update --context EmployeeDbContext
+dotnet ef migrations remove
+dotnet ef database drop
+// Generate SQL Script
+dotnet ef migrations script
+ */
+```
+
+[Entity Framework Core tools reference - .NET Core CLI](https://learn.microsoft.com/en-us/ef/core/cli/dotnet)  
+[Installation of Entity Framework Core](https://www.yogihosting.com/install-entity-framework-core/)  
+[Execute SQL Stored Procedures using FromSqlRaw() & ExecuteSqlRawAsync() methods in Entity Framework Core](https://www.yogihosting.com/stored-procedures-entity-framework-core/)
