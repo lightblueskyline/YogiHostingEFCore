@@ -18,7 +18,7 @@ namespace EFcoreExercise1.Controllers
             this.companyContext = companyContext;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             //Department dept = new Department()
             //{
@@ -26,6 +26,39 @@ namespace EFcoreExercise1.Controllers
             //};
             //this.companyContext.Entry(dept).State = EntityState.Added;
             //this.companyContext.SaveChanges();
+
+            #region Eager Loading
+            Employee? emp = await this.companyContext.Employee
+                .Where(x => x.Name == "Matt")
+                .Include(s => s.Department) // 通過導航屬性實現 Eager Loading
+                .FirstOrDefaultAsync();
+            // ThenInclude() 可以載入 Department 中包含的另一個導航屬性
+            #endregion
+
+            #region Explicit Loading in EF Core
+            emp = await this.companyContext.Employee
+                .Where(x => x.Name == "Matt")
+                .FirstOrDefaultAsync();
+            await this.companyContext.Entry<Employee>((emp ?? new Employee()))
+                .Reference(x => x.Department)
+                .LoadAsync();
+            await this.companyContext.Entry<Employee>((emp ?? new Employee()))
+                .Reference(x => x.Department)
+                .Query()
+                .Where(x => x.Name == "Admin")
+                .LoadAsync();
+            #endregion
+
+            #region Lazy Loading in EF Core
+            emp = await this.companyContext.Employee
+                .Where(x => x.Name == "Matt")
+                .FirstOrDefaultAsync();
+            string deptName = (emp?.Department?.Name ?? "");
+            #endregion
+
+            #region No Tracking of Entities
+            var emp1 = this.companyContext.Employee.AsNoTracking();
+            #endregion
 
             return View();
         }

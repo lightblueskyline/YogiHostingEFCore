@@ -42,5 +42,15 @@ namespace EFcoreExercise1.Models
                       .HasConstraintName("FK_Employee_Department");
             });
         }
+
+        #region Lazy Loading in EF Core
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseLazyLoadingProxies();
+            }
+        }
+        #endregion
     }
 }

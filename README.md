@@ -101,3 +101,15 @@ dotnet ef migrations script
 ## [EF Core - Insert Records](https://www.yogihosting.com/insert-records-entity-framework-core/)
 
 [How to call Web API from JavaScript](https://www.yogihosting.com/aspnet-core-web-api-javascript/)
+
+## [EF Core - Read Records](https://www.yogihosting.com/read-records-entity-framework-core/)
+
+```csharp
+/**
+Lazy Loading in EF Core 需要安裝包：
+Microsoft.EntityFrameworkCore.Proxies
+ */
+```
+
+[Read Records using ADO.NET in ASP.NET Core Application](https://www.yogihosting.com/read-records-ado-net-aspnet-core/)  
+[Create Number Paging with Custom Tag Helper in ASP.NET Core](https://www.yogihosting.com/aspnet-core-paging/)

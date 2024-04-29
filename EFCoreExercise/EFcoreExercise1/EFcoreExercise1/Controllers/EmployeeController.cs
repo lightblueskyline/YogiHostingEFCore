@@ -2,6 +2,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFcoreExercise1.Controllers
 {
@@ -16,7 +17,7 @@ namespace EFcoreExercise1.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(this.companyContext.Employee.Include(s => s.Department));
         }
 
         #region Entity Framework Core CRUD Operations – CREATE RECORDS
