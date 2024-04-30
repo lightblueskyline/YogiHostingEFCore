@@ -126,3 +126,9 @@ Microsoft.EntityFrameworkCore.Proxies
 [Configurations in Entity Framework Core](https://www.yogihosting.com/configurations-entity-framework-core/)  
 [Fluent API of Entity Framework Core](https://www.yogihosting.com/fluent-api-entity-framework-core/)  
 [Update Records in Entity Framework Core](https://www.yogihosting.com/update-records-entity-framework-core/)
+
+## [EF Core - Conventions](https://www.yogihosting.com/conventions-entity-framework-core/)
+
+[Configure One-to-Many relationship using Fluent API in Entity Framework Core](https://www.yogihosting.com/fluent-api-one-to-many-relationship-entity-framework-core/)  
+[EF Core Migrations](https://www.yogihosting.com/conventions-entity-framework-core/)  
+[Configure Many-to-Many relationship using Fluent API in Entity Framework Core](https://www.yogihosting.com/fluent-api-many-to-many-relationship-entity-framework-core/)
