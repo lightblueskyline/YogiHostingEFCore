@@ -120,3 +120,9 @@ Microsoft.EntityFrameworkCore.Proxies
 [Advanced Model Binding Concepts in ASP.NET Core](https://www.yogihosting.com/aspnet-core-advanced-model-binding/)  
 [Read Records in Entity Framework Core](https://www.yogihosting.com/read-records-entity-framework-core/)  
 [TryUpdateModelAsync](https://www.yogihosting.com/insert-records-entity-framework-core/#modelupdate)
+
+## [EF Core - Delete Records](https://www.yogihosting.com/delete-records-entity-framework-core/)
+
+[Configurations in Entity Framework Core](https://www.yogihosting.com/configurations-entity-framework-core/)  
+[Fluent API of Entity Framework Core](https://www.yogihosting.com/fluent-api-entity-framework-core/)  
+[Update Records in Entity Framework Core](https://www.yogihosting.com/update-records-entity-framework-core/)

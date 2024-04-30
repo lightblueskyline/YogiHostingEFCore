@@ -12,6 +12,7 @@
         <th>ID</th>
         <th>Name</th>
         <th>Update</th>
+        <th>Delete</th>
     </tr>
     @foreach (Department dept in Model)
     {
@@ -20,6 +21,13 @@
             <td>@dept.Name</td>
             <td>
                 <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@dept.Id">Update</a>
+            </td>
+            <td>
+                <form asp-action="Delete" asp-route-id="@dept.Id" method="post">
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        Delete
+                    </button>
+                </form>
             </td>
         </tr>
     }

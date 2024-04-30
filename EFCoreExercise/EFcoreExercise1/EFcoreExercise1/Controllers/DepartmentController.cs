@@ -52,5 +52,18 @@ namespace EFcoreExercise1.Controllers
             return RedirectToAction(nameof(Index));
         }
         #endregion
+
+        #region Entity Framework Core CRUD Operations – DELETE RECORDS
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var dept = new Department() { Id = id };
+            // 若無對應資料，會抛出異常：DbUpdateConcurrencyException
+            this.companyContext.Remove(dept);
+            await this.companyContext.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+        #endregion
     }
 }

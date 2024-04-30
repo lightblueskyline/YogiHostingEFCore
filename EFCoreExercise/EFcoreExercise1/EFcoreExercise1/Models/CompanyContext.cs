@@ -38,7 +38,7 @@ namespace EFcoreExercise1.Models
                 entity.HasOne(d => d.Department)
                       .WithMany(p => p.Employee)
                       .HasForeignKey(d => d.DepartmentId)
-                      .OnDelete(DeleteBehavior.ClientSetNull)
+                      .OnDelete(DeleteBehavior.ClientSetNull) // Cascade Delete 級聯刪除
                       .HasConstraintName("FK_Employee_Department");
             });
         }
