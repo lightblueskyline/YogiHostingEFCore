@@ -132,3 +132,8 @@ Microsoft.EntityFrameworkCore.Proxies
 [Configure One-to-Many relationship using Fluent API in Entity Framework Core](https://www.yogihosting.com/fluent-api-one-to-many-relationship-entity-framework-core/)  
 [EF Core Migrations](https://www.yogihosting.com/conventions-entity-framework-core/)  
 [Configure Many-to-Many relationship using Fluent API in Entity Framework Core](https://www.yogihosting.com/fluent-api-many-to-many-relationship-entity-framework-core/)
+
+## [EF Core - Configurations](https://www.yogihosting.com/configurations-entity-framework-core/)
+
+[Conventions in Entity Framework Core](https://www.yogihosting.com/conventions-entity-framework-core/)  
+[Model Validation in ASP.NET Core from Beginning to Expert](https://www.yogihosting.com/aspnet-core-model-validation/)
